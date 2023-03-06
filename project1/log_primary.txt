@@ -1,0 +1,53 @@
+[ec2-user@ip-10-1-20-200 ~]$ mysql -h database-1.c1vtzdhhbfsn.us-east-1.rds.amazonaws.com -P 3306 -u admin -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MySQL connection id is 77
+Server version: 8.0.28 Source distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MySQL [(none)]> show DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
+| udacity            |
++--------------------+
+5 rows in set (0.00 sec)
+
+MySQL [(none)]> use udacity;
+Database changed
+MySQL [udacity]> CREATE TABLE student(name VARCHAR(50) NOT NULL, sex VARCHAR(10) NOT NULL, AGE NUMBER(3), class VARCHAR(12), ID_Student NUMBER(20) NOT NULL, PRIMARY KEY(ID_Student));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'NUMBER(3), class VARCHAR(12), ID_Student NUMBER(20) NOT NULL, PRIMARY KEY(ID_Stu' at line 1
+MySQL [udacity]> CREATE TABLE student(name VARCHAR(50) NOT NULL, sex VARCHAR(10) NOT NULL, age int(3), class VARCHAR(12), ID_Student int(20) NOT NULL, PRIMARY KEY(ID_Student));
+Query OK, 0 rows affected, 2 warnings (1.06 sec)
+
+MySQL [udacity]> DESCRIBE student;
++------------+-------------+------+-----+---------+-------+
+| Field      | Type        | Null | Key | Default | Extra |
++------------+-------------+------+-----+---------+-------+
+| name       | varchar(50) | NO   |     | NULL    |       |
+| sex        | varchar(10) | NO   |     | NULL    |       |
+| age        | int         | YES  |     | NULL    |       |
+| class      | varchar(12) | YES  |     | NULL    |       |
+| ID_Student | int         | NO   | PRI | NULL    |       |
++------------+-------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+MySQL [udacity]> INSERT INTO student VALUE ("HoanQ4", "Male", 26, "12A1", 1);
+Query OK, 1 row affected (0.47 sec)
+
+MySQL [udacity]> SELECT * FROM student;
++--------+------+------+-------+------------+
+| name   | sex  | age  | class | ID_Student |
++--------+------+------+-------+------------+
+| HoanQ4 | Male |   26 | 12A1  |          1 |
++--------+------+------+-------+------------+
+1 row in set (0.00 sec)
+
+MySQL [udacity]>

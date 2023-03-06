@@ -1,0 +1,11 @@
+Minimum RTO for a single AZ outage:
+The minimum RTO (Recovery Time Objective) for a single AZ outage is the amount of time required to restore service after an AZ becomes unavailable. Factors affecting the minimum RTO include the size of the outage, the system complexity, and the redundancy level built into the architecture. The goal is to minimize the downtime and ensure that service is restored as quickly as possible.
+
+Minimum RTO for a single region outage:
+The minimum RTO for a single region outage is the time it takes to restore service after an entire region becomes unavailable. This is typically a more complicated process than restoring service after a single AZ outage as it involves coordinating the recovery of multiple AZs within the region. The minimum RTO for a region outage can be affected by factors such as the size of the region, the complexity of the system, and the level of redundancy built into the architecture.
+
+Minimum RPO for a single AZ outage:
+The minimum RPO (Recovery Point Objective) for a single AZ outage is the amount of data that can be lost during the recovery process. This is typically measured in time and can be affected by factors such as the frequency of data backups, the size of the data set, and the rate of data change. The goal is to minimize data loss and ensure that data is recovered as completely as possible.
+
+Minimum RPO for a single region outage:
+The minimum RPO for a single region outage is the amount of data that can be lost when an entire region becomes unavailable. This is typically a more challenging task than recovering from a single AZ outage as it involves coordinating the recovery of data from multiple AZs within the region while minimizing the risk of data loss. Factors affecting the minimum RPO for a region outage can include the size of the region, the complexity of the system, and the level of redundancy built into the architecture. The goal is to minimize data loss and ensure that data is recovered as completely as possible.

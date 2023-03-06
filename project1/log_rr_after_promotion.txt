@@ -1,0 +1,28 @@
+MySQL [(none)]> use udacity;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+MySQL [udacity]> select * from student;
++--------+------+------+-------+------------+
+| name   | sex  | age  | class | ID_Student |
++--------+------+------+-------+------------+
+| HoanQ4 | Male |   26 | 12A1  |          1 |
++--------+------+------+-------+------------+
+1 row in set (0.00 sec)
+
+MySQL [udacity]> INSERT INTO student value ("Nobody", "Male", 27, "12A3", 2);
+ERROR 1290 (HY000): The MySQL server is running with the --read-only option so it cannot execute this statement
+MySQL [udacity]> INSERT INTO student value ("Nobody", "Male", 27, "12A3", 2);
+ERROR 1290 (HY000): The MySQL server is running with the --read-only option so it cannot execute this statement
+MySQL [udacity]> INSERT INTO student value ("Nobody", "Male", 27, "12A3", 2);
+ERROR 1290 (HY000): The MySQL server is running with the --read-only option so it cannot execute this statement
+MySQL [udacity]> INSERT INTO student value ("Nobody", "Male", 27, "12A3", 2);
+ERROR 2006 (HY000): MySQL server has gone away
+No connection. Trying to reconnect...
+Connection id:    9
+Current database: udacity
+
+Query OK, 1 row affected (0.04 sec)
+
+MySQL [udacity]>
