@@ -1,0 +1,20 @@
+﻿Estimate summary
+Upfront cost,Monthly cost,Total 12 months cost,Currency
+0,8262.248000000001,99146.98,USD
+,,* Includes upfront cost
+
+
+Detailed Estimate
+Group hierarchy,Region,Description,Service,Upfront,Monthly,First 12 months total,Currency,Configuration summary
+My Estimate,US East (N. Virginia),,Amazon CloudFront,0,575,6900.00,USD,"Data transfer out to internet (5000 GB per month), Data transfer out to origin (5000 GB per month), Number of requests (HTTPS) (50000000 per month)"
+My Estimate,US East (N. Virginia),,S3 Standard,0,554,6648.00,USD,S3 Standard storage (10000 GB per month)
+My Estimate,US East (N. Virginia),,Network Address Translation (NAT) Gateway,0,965.7,11588.40,USD,Number of NAT Gateways (2)
+My Estimate,US East (N. Virginia),,Amazon EC2 ,0,3925.248,47102.98,USD,"Tenancy (Shared Instances), Operating system (Linux), DT Inbound: Not selected (0 TB per month), DT Outbound: Not selected (0 TB per month), DT Intra-Region: (0 TB per month), Workload (Consistent, Number of instances: 8), Enable monitoring (enabled), Advance EC2 instance (t4g.large), Pricing strategy (), Storage amount (500 GB), Snapshot Frequency (Hourly), Amount changed per snapshot (20 GB)"
+My Estimate,US East (N. Virginia),,Amazon Elastic IP,0,7.32,87.84,USD,"Number of EC2 instances (2), Number of EIPs per instance (2)"
+My Estimate,US East (N. Virginia),,Amazon RDS for Oracle,0,1812.8,21753.60,USD,"Storage for each RDS instance (General Purpose SSD (gp2)), Storage amount (5 TB), Number of RDS for Oracle instances (1), Instance type (db.m3.xlarge), Utilization (On-Demand only) (100 %Utilized/Month), Deployment option (Multi-AZ), License (Bring your own license), Database edition (Enterprise), Pricing strategy (OnDemand), Additional backup storage (1000 GB)"
+My Estimate,US East (N. Virginia),,Application Load Balancer,0,422.18,5066.16,USD,Number of Application Load Balancers (2)
+
+
+
+Acknowledgement
+"* AWS Pricing Calculator provides only an estimate of your AWS fees and doesn't include any taxes that might apply. Your actual fees depend on a variety of factors, including your actual usage of AWS services."
