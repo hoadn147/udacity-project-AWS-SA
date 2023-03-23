@@ -1,0 +1,11 @@
+
+# What additional architectural change can be made to reduce the internet facing attack surface of the web application instance.
+- Implement a WAF to filter out malicious traffic and prevent attacks such as SQL injection, cross-site scripting (XSS), and other known vulnerabilities.
+- Implement a network Load Balancer in front of the web application instance to distribute traffic across multiple instances and prevent single points of failure.
+- Implement a Content Delivery Network (CDN) to cache static assets and reduce the load on the web application instance.
+# Assuming the IAM permissions for the S3 bucket are still insecure, would creating VPC private endpoints for S3 prevent the unauthorized access to the secrets bucket.
+- creating VPC private endpoints for S3 can help prevent unauthorized access to the secrets bucket by allowing traffic to flow securely between the VPC and S3 without traversing the internet.
+# Will applying default encryption setting to the s3 buckets encrypt the data that already exists?
+- Default encryption settings can be applied to S3 buckets to encrypt all new data uploaded to the bucket. However, data that was uploaded before the encryption settings were applied will remain unencrypted. To encryptneed to use server-side encryption or client-side encryption and re-upload the data.
+# What would happen if the original cloud formation templates are applied to this environment.
+- If the original CloudFormation templates are applied to this environment, the changes made through the console or CLI would be overwritten, and the environment would return to its previous state. To avoid this, any changes made to the environment should be included in the CloudFormation templates, so they are automatically applied during deployment.

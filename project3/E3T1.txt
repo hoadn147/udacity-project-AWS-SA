@@ -1,0 +1,12 @@
+# Describe GuardDuty findings that were detected related to the brute force attack
+Brute Force: GuardDuty may also generate a finding specifically related to a brute force attack. This finding may indicate that an attacker is attempting to gain unauthorized access to a resource by repeatedly trying different username and password combinations.
+Unauthorized Access: If the brute force attack is successful and the attacker gains access to a resource, GuardDuty may generate a finding indicating that unauthorized access has occurred. This finding may also provide details on the compromised resource and the time of the unauthorized access.
+# Research the AWS Guard Duty documentation page and explain how GuardDuty may have detected this attack - i.e. what was its source of information.
+GuardDuty uses a variety of sources of information to detect security threats, including network traffic logs, CloudTrail logs, VPC Flow Logs, and DNS logs, among others.
+
+In the case of a brute force attack, GuardDuty may detect the attack through several sources of information:
+Authentication Logs: GuardDuty can analyze authentication logs from various AWS services, including AWS Identity and Access Management (IAM), AWS Directory Service, and AWS Security Token Service. By analyzing these logs, GuardDuty can identify repeated failed authentication attempts, which may indicate a brute force attack.
+VPC Flow Logs: GuardDuty can also analyze VPC Flow Logs to detect network traffic associated with a brute force attack. For example, GuardDuty may detect a large number of requests to an SSH port, which could indicate a brute force attack targeting SSH.
+DNS Logs: GuardDuty can analyze DNS logs to detect anomalous DNS queries that may indicate a brute force attack. For example, if GuardDuty detects a large number of failed DNS queries for a specific domain, it may indicate that an attacker is attempting to guess subdomains or hostnames to identify potential targets.
+Threat Intelligence: GuardDuty also uses threat intelligence feeds to identify known bad actors and malicious IP addresses that may be associated with brute force attacks. By correlating network traffic logs with threat intelligence data, GuardDuty can identify and block traffic from these malicious sources.
+Overall, GuardDuty's ability to analyze multiple sources of information allows it to detect brute force attacks and other security threats in real-time, helping to protect your AWS environment from potential attacks.

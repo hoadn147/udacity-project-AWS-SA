@@ -1,0 +1,24 @@
+# Identify tools that will allow you to do the following:
+
+## Scan infrastructure as code templates
+- AWS Config
+- IaC scanning tools like Checkov, CloudSploit.
+
+### Example vulnerability
+- An EC2 instance is launched with an outdated security group rule that allows inbound traffic over port 22 (SSH) from any source IP address.
+- One or more AWS resources, such as an S3 bucket, has overly permissive access control policies, making it vulnerable to unauthorized access and exfiltration of sensitive data.
+
+##Scan AMI’s or containers for OS vulnerabilities
+- Amazon Inspector
+-  Docker Bench Security
+
+### Example vulnerability
+- An instance is found using an outdated version of the NGINX web server that is known to be vulnerable to a specific security exploit.
+- A Docker container is found running with a privilege level that is unnecessary for its required operations, creating a possible privilege escalation risk.
+
+##Scan an AWS environment for cloud configuration vulnerabilities
+- AWS Security Hub
+- Cloud Custodian
+### Example vulnerability
+- An EC2 instance has a misconfigured IAM role and security group settings, allowing anyone in the role to access data they're not authorized to see. 
+- An EC2 instance is launched without the required security group defined, opening it up to various network attacks.

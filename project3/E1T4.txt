@@ -1,0 +1,9 @@
+Based on the architecture diagram, and the steps you have taken so far to upload data and access the application web service, identify at least 2 obvious poor practices as it relates to security.  Include justification.
+
+# Poor practice 1
+Both ec2 on public subnet make easy to access. Dont have any SCP for control modify s3 -> easy to get or put or delete object in s3
+Should make a Ec2 in private public then only that ec2 can get or put object to s3 secret using policy s3 bucket. Make ec2 (Web Service Instance) become bastion host for new ec2 private.
+
+# Poor practice 2
+Attacker easy to access to s3 because both bucket dont have any policy bucket and bucket is public.
+Create Policy for s3 only can modify and apply for 1 role. Using IAM create 1 role for access s3. Base on that will make even attacker can stolen API credentials but they cant get data from s3 secret.
